@@ -15,11 +15,11 @@ module OmniAuth
           :email => raw_info['email'],
           :first_name => raw_info['first_name'],
           :last_name => raw_info['last_name'],
-          :address => {
-            :street => raw_info['street'],
-            :city => raw_info['city'],
-            :state => raw_info['state'],
-            :zip => raw_info['zip']
+          :location => {
+            :street => raw_info['address']['street'],
+            :city => raw_info['address']['city'],
+            :state => raw_info['address']['state'],
+            :zip => raw_info['address']['zip']
           }
         }
       end
