@@ -27,7 +27,7 @@ module OmniAuth
       def raw_info
         access_token.options[:mode] = :query
         access_token.options[:param_name] = 'oauth_token'
-        @raw_info ||= access_token.get("#{API_PATH_PREFIX}/me?scope=#{CGI.escape(options['scope'])}").parsed
+        @raw_info ||= access_token.get("#{API_PATH_PREFIX}/me").parsed
       end
 
     end
